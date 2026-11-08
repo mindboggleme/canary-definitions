@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "note": "Pilot for docs/design/ALWAYS_UPDATING_DEFINITIONS.md in mindboggleme/Canary-IDS -- the first of the four compiled-in hardware/malware signature files moved to a refreshable feed (CAN-202). Fetched daily by FlockSignatureFeed and on demand by the Blocklist card's Update button; see hardware/FlockSignatures.kt in Canary-IDS for how each field is matched and why each value was chosen. Bump 'version' on every real change so the troubleshooting report and the Blocklist card can say which set is loaded.",
+  "softApSsidPattern": "^Flock-[0-9A-Fa-f]{6}$",
+  "confirmedOui": "b4:1e:52",
+  "batteryNamePattern": "^Penguin-\\d{10}$",
+  "batteryNameLiteral": "FS Ext Battery",
+  "gattServiceUuid": "e8ccbb38-9532-46a8-9fe5-1814df172e6f",
+  "ravenServiceRange": [12544, 13568]
+}
