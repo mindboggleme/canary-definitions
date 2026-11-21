@@ -1,0 +1,140 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "id": "us-courtlistener",
+      "scope": "US",
+      "kind": "case_law",
+      "name": "CourtListener",
+      "url": "https://www.courtlistener.com/",
+      "covers": "Federal cases and opinions; built into this tab",
+      "checked": "2026-11-21"
+    },
+    {
+      "id": "us-pacer",
+      "scope": "US",
+      "kind": "court_records",
+      "name": "PACER (federal courts)",
+      "url": "https://pacer.uscourts.gov/",
+      "covers": "Federal filings; account and per-page fee",
+      "checked": "2026-11-21"
+    },
+    {
+      "id": "us-bop",
+      "scope": "US",
+      "kind": "inmate_search",
+      "name": "Federal Bureau of Prisons inmate locator",
+      "url": "https://www.bop.gov/inmateloc/",
+      "covers": "Federal prisoners since 1982",
+      "checked": "2026-11-21"
+    },
+    {
+      "id": "us-nsopw",
+      "scope": "US",
+      "kind": "sex_offender_registry",
+      "name": "National Sex Offender Public Website",
+      "url": "https://www.nsopw.gov/",
+      "covers": "All state registries; manual search only",
+      "checked": "2026-11-21"
+    },
+    {
+      "id": "us-vinelink",
+      "scope": "US",
+      "kind": "custody_alerts",
+      "name": "VINELink",
+      "url": "https://www.vinelink.com/",
+      "covers": "Custody status and free release alerts; jail coverage varies",
+      "checked": "2026-11-21"
+    },
+    {
+      "id": "co-dockets",
+      "scope": "CO",
+      "kind": "court_hearings",
+      "name": "Colorado courts: docket search",
+      "url": "https://www.coloradojudicial.gov/dockets",
+      "covers": "State court hearings, including Denver District Court; free",
+      "checked": "2026-11-21"
+    },
+    {
+      "id": "co-records",
+      "scope": "CO",
+      "kind": "court_records",
+      "name": "Colorado courts: records search guide",
+      "url": "https://www.coloradojudicial.gov/courts-records-search",
+      "covers": "Full case records through paid vendors",
+      "checked": "2026-11-21"
+    },
+    {
+      "id": "co-doc",
+      "scope": "CO",
+      "kind": "inmate_search",
+      "name": "Colorado Department of Corrections offender search",
+      "url": "https://www.doc.state.co.us/oss/",
+      "covers": "State prisons and parole; not county jails",
+      "checked": "2026-11-21"
+    },
+    {
+      "id": "co-sor",
+      "scope": "CO",
+      "kind": "sex_offender_registry",
+      "name": "Colorado sex offender registry (CBI)",
+      "url": "https://apps.colorado.gov/apps/dps/sor/",
+      "covers": "Not every registered person is posted",
+      "checked": "2026-11-21"
+    },
+    {
+      "id": "co-ichc",
+      "scope": "CO",
+      "kind": "court_records",
+      "name": "CBI criminal history check",
+      "url": "https://www.cbirecordscheck.com/",
+      "covers": "Name-based, fee per search",
+      "checked": "2026-11-21"
+    },
+    {
+      "id": "co-sos",
+      "scope": "CO",
+      "kind": "business_entities",
+      "name": "Colorado Secretary of State business search",
+      "url": "https://www.sos.state.co.us/biz/BusinessEntityCriteriaExt.do",
+      "covers": "Filings, agents, status",
+      "checked": "2026-11-21"
+    },
+    {
+      "id": "co-dora",
+      "scope": "CO",
+      "kind": "professional_licences",
+      "name": "Colorado DORA licence lookup",
+      "url": "https://apps2.colorado.gov/dora/licensing/lookup/licenselookup.aspx",
+      "covers": "Licences and discipline",
+      "checked": "2026-11-21"
+    },
+    {
+      "id": "den-county-court",
+      "scope": "CO-Denver",
+      "kind": "court_records",
+      "name": "Denver County Court case search",
+      "url": "https://www.denvercountycourt.org/search/",
+      "covers": "Denver County Court cases the state search misses",
+      "checked": "2026-11-21"
+    },
+    {
+      "id": "den-jail",
+      "scope": "CO-Denver",
+      "kind": "inmate_search",
+      "name": "Denver Sheriff inmate search",
+      "url": "https://www.denvergov.org/inmatesearch",
+      "covers": "Denver jails",
+      "checked": "2026-11-21"
+    },
+    {
+      "id": "den-assessor",
+      "scope": "CO-Denver",
+      "kind": "property_assessor",
+      "name": "Denver property search",
+      "url": "https://www.denvergov.org/Property",
+      "covers": "Owner, value, schedule number",
+      "checked": "2026-11-21"
+    }
+  ]
+}
