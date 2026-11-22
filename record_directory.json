@@ -1,15 +1,6 @@
 {
-  "version": 1,
+  "version": 2,
   "entries": [
-    {
-      "id": "us-courtlistener",
-      "scope": "US",
-      "kind": "case_law",
-      "name": "CourtListener",
-      "url": "https://www.courtlistener.com/",
-      "covers": "Federal cases and opinions; built into this tab",
-      "checked": "2026-11-21"
-    },
     {
       "id": "us-pacer",
       "scope": "US",
