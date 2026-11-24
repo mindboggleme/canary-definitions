@@ -1,0 +1,505 @@
+{
+ "version": 1,
+ "recipes": [
+  {
+   "id": "co_licences",
+   "label": "Professional licences (DORA)",
+   "host": "data.colorado.gov",
+   "dataset": "7s5z-vewr",
+   "person": {
+    "first": "firstname",
+    "last": "lastname"
+   },
+   "order": "lastname,firstname",
+   "title": [
+    "{firstname} {middlename} {lastname} {suffix}"
+   ],
+   "titleFallback": "Licence",
+   "lines": [
+    {
+     "parts": [
+      "{city}",
+      "{state}"
+     ],
+     "sep": ", "
+    },
+    {
+     "parts": [
+      "Licence {licensetype} {licensenumber}",
+      "{licensestatusdescription}"
+     ],
+     "sep": " · "
+    },
+    {
+     "parts": [
+      "Issued {licensefirstissuedate|date}",
+      "expires {licenseexpirationdate|date}"
+     ],
+     "sep": ", "
+    },
+    {
+     "parts": [
+      "{title}",
+      "{specialty}"
+     ],
+     "sep": " · "
+    },
+    {
+     "parts": [
+      "case {casenumber}",
+      "{programaction}",
+      "from {disciplineeffectivedate|date}"
+     ],
+     "sep": ", ",
+     "prefix": "Discipline: ",
+     "requires": "casenumber"
+    }
+   ],
+   "place": [
+    "{city}",
+    "{state} {mailzipcode}"
+   ],
+   "link": "linktoverifylicense.url"
+  },
+  {
+   "id": "co_businesses",
+   "label": "Businesses and registered agents",
+   "host": "data.colorado.gov",
+   "dataset": "4ykn-tg5h",
+   "person": {
+    "first": "agentfirstname",
+    "last": "agentlastname"
+   },
+   "address": {
+    "street": "principaladdress1",
+    "zip": "principalzipcode"
+   },
+   "order": "entityformdate DESC",
+   "title": [
+    "{entityname}"
+   ],
+   "titleFallback": "Business",
+   "lines": [
+    {
+     "parts": [
+      "{entitystatus}",
+      "formed {entityformdate|date}"
+     ],
+     "sep": " · "
+    },
+    {
+     "parts": [
+      "{principaladdress1}",
+      "{principalcity}",
+      "{principalstate} {principalzipcode}"
+     ],
+     "sep": ", ",
+     "prefix": "Business address: "
+    },
+    {
+     "parts": [
+      "{agentfirstname} {agentlastname}",
+      "{agentorganizationname}",
+      "{agentprincipaladdress1}",
+      "{agentprincipalcity}",
+      "{agentprincipalstate} {agentprincipalzipcode}"
+     ],
+     "sep": ", ",
+     "prefix": "Agent: "
+    }
+   ],
+   "place": [
+    "{principalcity}",
+    "{principalstate} {principalzipcode}"
+   ],
+   "map": [
+    "{principaladdress1}",
+    "{principalcity}",
+    "{principalstate} {principalzipcode}"
+   ]
+  },
+  {
+   "id": "co_trade_names",
+   "label": "Trade names",
+   "host": "data.colorado.gov",
+   "dataset": "u7sb-g482",
+   "person": {
+    "first": "firstname",
+    "last": "lastname"
+   },
+   "address": {
+    "street": "address1",
+    "zip": "zipcode"
+   },
+   "order": "effectivedate DESC",
+   "title": [
+    "{tradenamedescription}"
+   ],
+   "titleFallback": "Trade name",
+   "lines": [
+    {
+     "parts": [
+      "Registered by {firstname} {middlename} {lastname} {suffix}",
+      "{registrantorganization}"
+     ],
+     "sep": " · "
+    },
+    {
+     "parts": [
+      "{entitystatus}",
+      "registered {effectivedate|date}"
+     ],
+     "sep": " · "
+    },
+    {
+     "parts": [
+      "{address1}",
+      "{city}",
+      "{state} {zipcode}"
+     ],
+     "sep": ", ",
+     "prefix": "Address: "
+    }
+   ],
+   "place": [
+    "{city}",
+    "{state} {zipcode}"
+   ],
+   "map": [
+    "{address1}",
+    "{city}",
+    "{state} {zipcode}"
+   ]
+  },
+  {
+   "id": "co_charity_people",
+   "label": "Charity officers",
+   "host": "data.colorado.gov",
+   "dataset": "mr4v-jz8u",
+   "person": {
+    "first": "firstname",
+    "last": "lastname"
+   },
+   "title": [
+    "{firstname} {middlename} {lastname}",
+    "{title}"
+   ],
+   "titleFallback": "Charity officer",
+   "lines": [
+    {
+     "parts": [
+      "{name}",
+      "{entitytype}"
+     ],
+     "sep": " · ",
+     "prefix": "Organization: "
+    },
+    {
+     "parts": [
+      "{principaladdress}",
+      "{principalcity}",
+      "{principalstate} {principalzipcode}"
+     ],
+     "sep": ", ",
+     "prefix": "Address: "
+    }
+   ],
+   "place": [
+    "{principalcity}",
+    "{principalstate} {principalzipcode}"
+   ],
+   "phone": "{phone}",
+   "map": [
+    "{principaladdress}",
+    "{principalcity}",
+    "{principalstate} {principalzipcode}"
+   ]
+  },
+  {
+   "id": "co_charities",
+   "label": "Charity registrations",
+   "host": "data.colorado.gov",
+   "dataset": "37wu-kn3g",
+   "person": {
+    "full": "authorizedofficername"
+   },
+   "address": {
+    "street": "principaladdress",
+    "zip": "principalzipcode"
+   },
+   "title": [
+    "{name}"
+   ],
+   "titleFallback": "Charity",
+   "lines": [
+    {
+     "parts": [
+      "{registranttypeabbr}",
+      "{currentstatus}"
+     ],
+     "sep": " · "
+    },
+    {
+     "parts": [
+      "{authorizedofficername}"
+     ],
+     "sep": ", ",
+     "prefix": "Authorized officer: "
+    },
+    {
+     "parts": [
+      "{principaladdress}",
+      "{principalcity}",
+      "{principalstate} {principalzipcode}"
+     ],
+     "sep": ", ",
+     "prefix": "Address: "
+    }
+   ],
+   "place": [
+    "{principalcity}",
+    "{principalstate} {principalzipcode}"
+   ],
+   "phone": "{phone}",
+   "map": [
+    "{principaladdress}",
+    "{principalcity}",
+    "{principalstate} {principalzipcode}"
+   ]
+  },
+  {
+   "id": "co_lobbyists",
+   "label": "Lobbyists",
+   "host": "data.colorado.gov",
+   "dataset": "yk7f-aegj",
+   "person": {
+    "first": "lobbyistfirstname",
+    "last": "lobbyistlastname"
+   },
+   "address": {
+    "street": "lobbyistaddress",
+    "zip": "lobbyistzip"
+   },
+   "title": [
+    "{lobbyistfirstname} {lobbyistmiddlename} {lobbyistlastname} {lobbyistsuffix}"
+   ],
+   "titleFallback": "Lobbyist",
+   "lines": [
+    {
+     "parts": [
+      "{lobbyistfirmname}",
+      "{lobbyisttype}",
+      "{status}"
+     ],
+     "sep": " · "
+    },
+    {
+     "parts": [
+      "{lobbyistaddress}",
+      "{lobbyistcity}",
+      "{lobbyiststate} {lobbyistzip}"
+     ],
+     "sep": ", ",
+     "prefix": "Address: "
+    }
+   ],
+   "place": [
+    "{lobbyistcity}",
+    "{lobbyiststate} {lobbyistzip}"
+   ],
+   "phone": "{lobbyistphone}",
+   "map": [
+    "{lobbyistaddress}",
+    "{lobbyistcity}",
+    "{lobbyiststate} {lobbyistzip}"
+   ]
+  },
+  {
+   "id": "co_liquor",
+   "label": "Liquor licences",
+   "host": "data.colorado.gov",
+   "dataset": "ier5-5ms2",
+   "person": {
+    "full": "licensee_name"
+   },
+   "address": {
+    "street": "street_address",
+    "zip": "zip"
+   },
+   "title": [
+    "{licensee_name}"
+   ],
+   "titleFallback": "Liquor licensee",
+   "lines": [
+    {
+     "parts": [
+      "{doing_business_as}"
+     ],
+     "sep": ", ",
+     "prefix": "Doing business as "
+    },
+    {
+     "parts": [
+      "{license_type}",
+      "{license_number}"
+     ],
+     "sep": " · "
+    },
+    {
+     "parts": [
+      "expires {expiration|date}"
+     ],
+     "sep": ", "
+    },
+    {
+     "parts": [
+      "{street_address}",
+      "{city}",
+      "{state} {zip|zip}"
+     ],
+     "sep": ", ",
+     "prefix": "Address: "
+    }
+   ],
+   "place": [
+    "{city}",
+    "{state} {zip|zip}"
+   ],
+   "map": [
+    "{street_address}",
+    "{city}",
+    "{state} {zip|zip}"
+   ]
+  },
+  {
+   "id": "co_tobacco",
+   "label": "Tobacco licences",
+   "host": "data.colorado.gov",
+   "dataset": "ejz2-rwds",
+   "person": {
+    "full": "licensee_name"
+   },
+   "address": {
+    "street": "street_address"
+   },
+   "title": [
+    "{licensee_name}"
+   ],
+   "titleFallback": "Tobacco licensee",
+   "lines": [
+    {
+     "parts": [
+      "{doing_business_as}"
+     ],
+     "sep": ", ",
+     "prefix": "Doing business as "
+    },
+    {
+     "parts": [
+      "{license_type}",
+      "{license_no}"
+     ],
+     "sep": " · "
+    },
+    {
+     "parts": [
+      "expires {expires|date}"
+     ],
+     "sep": ", "
+    },
+    {
+     "parts": [
+      "{street_address}",
+      "{city}",
+      "{state} {zip|zip}"
+     ],
+     "sep": ", ",
+     "prefix": "Address: "
+    }
+   ],
+   "place": [
+    "{city}",
+    "{state} {zip|zip}"
+   ],
+   "map": [
+    "{street_address}",
+    "{city}",
+    "{state} {zip|zip}"
+   ]
+  },
+  {
+   "id": "co_wells",
+   "label": "Water-well permits",
+   "host": "data.colorado.gov",
+   "dataset": "wumm-7awb",
+   "person": {
+    "full": "contact_name"
+   },
+   "title": [
+    "{contact_name}"
+   ],
+   "titleFallback": "Well permit",
+   "lines": [
+    {
+     "parts": [
+      "Permit {permit}",
+      "{permit_category}",
+      "{current_status}"
+     ],
+     "sep": " · "
+    },
+    {
+     "parts": [
+      "issued {permit_issued|date}",
+      "expires {permit_expires|date}"
+     ],
+     "sep": ", "
+    },
+    {
+     "parts": [
+      "{county} County",
+      "{address}"
+     ],
+     "sep": ", ",
+     "prefix": "Location: "
+    }
+   ],
+   "place": [
+    "{county} County"
+   ],
+   "map": [
+    "{latitude}",
+    "{longitude}"
+   ],
+   "link": "more_information.url"
+  },
+  {
+   "id": "co_notaries",
+   "label": "Notaries",
+   "host": "data.colorado.gov",
+   "dataset": "k4uv-yvnk",
+   "person": {
+    "first": "firstname",
+    "last": "lastname"
+   },
+   "order": "lastname,firstname",
+   "title": [
+    "{firstname} {middlename} {lastname} {suffix}"
+   ],
+   "titleFallback": "Notary",
+   "lines": [
+    {
+     "parts": [
+      "commission {commissionstart|date}",
+      "expires {commissionexpire|date}"
+     ],
+     "sep": ", ",
+     "prefix": "Notary: "
+    }
+   ],
+   "place": [
+    "ZIP {zipcode}"
+   ]
+  }
+ ]
+}

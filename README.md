@@ -32,6 +32,13 @@ at all, while every other line of Canary's own source code stays private.
   this file is parsed, validated and used, and
   `docs/design/ALWAYS_UPDATING_DEFINITIONS.md` for the full design.
 
+- `record_directory.json` -- the OSINT tab's hand-reviewed list of official court,
+  jail, registry, licence and property-record sites (`lookup/RecordDirectory.kt`).
+- `source_recipes.json` -- the OSINT tab's Colorado open-data source recipes
+  (`lookup/SocrataRecipes.kt`, `lookup/SourceRecipeFeed.kt`). A recipe may only name a
+  host from a fixed list compiled into the app, so this file can change which
+  columns are shown but never where a search is sent.
+
 More files will be added here as the same pattern extends to Canary's other
 compiled-in signature sets (`HackerSignatures`, `OffensiveToolSignatures`,
 `MalwareStringSignatures`).
